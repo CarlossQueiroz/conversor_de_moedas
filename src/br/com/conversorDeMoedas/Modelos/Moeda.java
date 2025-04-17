@@ -1,16 +1,18 @@
 package br.com.conversorDeMoedas.Modelos;
 
-public class ConversorMoedas {
+public class Moeda {
     private String moedaOrigem;
     private String moedaDestino;
-    private double valor;
-    private double taxaConversao;
+    private double valorOriginal;
+    private double taxaDeCambio;
+    private double valorConvertido;
 
-    public ConversorMoedas(String moedaOrigem, String moedaDestino, double valor, double taxaConversao) {
+    public Moeda(String moedaOrigem, String moedaDestino, double valorOriginal, double taxaDeCambio) {
         this.moedaOrigem = moedaOrigem;
         this.moedaDestino = moedaDestino;
-        this.valor = valor;
-        this.taxaConversao = taxaConversao;
+        this.valorOriginal = valorOriginal;
+        this.taxaDeCambio = taxaDeCambio;
+        this.valorConvertido = valorOriginal * taxaDeCambio;
     }
 
     public String getMoedaOrigem() {
@@ -21,21 +23,20 @@ public class ConversorMoedas {
         return moedaDestino;
     }
 
-    public double getValor() {
-        return valor;
+    public double getValorOriginal() {
+        return valorOriginal;
     }
 
-    public double getTaxaConversao() {
-        return taxaConversao;
+    public double getTaxaDeCambio() {
+        return taxaDeCambio;
+    }
+
+    public double getValorConvertido() {
+        return valorConvertido;
     }
 
     @Override
     public String toString() {
-        return "ConversorMoedas{" +
-                "moedaOrigem='" + moedaOrigem + '\'' +
-                ", moedaDestino='" + moedaDestino + '\'' +
-                ", valor=" + valor +
-                ", taxaConversao=" + taxaConversao +
-                '}';
+        return String.format("Valor %.2f [%s] corresponde a %.2f [%s]", valorOriginal, moedaOrigem, valorConvertido, moedaDestino);
     }
 }
