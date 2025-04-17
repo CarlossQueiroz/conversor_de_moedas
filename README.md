@@ -1,6 +1,6 @@
 # Conversor de Moeda - Challenge ONE - Java - Back end
 
-![Capa: conversor de moedas](https://github.com/user-attachments/assets/7b8c83cf-bd35-4049-8bc1-0bf7ba8eac02)
+![Capa: conversor de moedas](https://github.com/user-attachments/assets/83314d39-14ad-4bcd-a09f-d337faadf8e8)
 
 Projeto de console desenvolvido em Java, que simula um conversor de moedas, permitindo ao usuário realizar conversões com base em taxas de câmbio atualizadas em tempo real através da [Exchange-Rate API ](http://https://www.exchangerate-api.com/ "Exchange Rate API ").
 
